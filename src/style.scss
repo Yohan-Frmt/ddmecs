@@ -1,0 +1,61 @@
+html, body {
+  height: 100vh;
+}
+
+#root {
+  height: inherit;
+  display: flex;
+}
+
+#board {
+  height: inherit;
+  width: 38vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+                  90deg,
+                  rgb(255, 255, 255) 0,
+                  rgb(88, 88, 88) 8%,
+                  rgb(88, 88, 88) 92%,
+                  rgb(255, 255, 255) 100%);
+}
+
+.summary {
+  height: inherit;
+  width: 31vw;
+}
+
+#playerA {
+  height: 100%;
+  background-color: coral;
+}
+
+#playerA:has(+ #playerC) {
+  height: 50%;
+  background-color: coral;
+}
+
+#playerB {
+  height: 100%;
+  background-color: violet;
+}
+
+#playerB:has(+ #playerD) {
+  height: 50%;
+  background-color: violet;
+}
+
+#playerC {
+  height: 50%;
+  background-color: greenyellow;
+}
+
+#playerD {
+  height: 50%;
+  background-color: mediumaquamarine;
+}
+
+canvas {
+  position: absolute;
+}
